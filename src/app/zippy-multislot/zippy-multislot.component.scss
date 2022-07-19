@@ -1,0 +1,40 @@
+.toolbar {
+  display: flex;
+  height: 48px;
+  justify-content: flex-end;
+}
+
+.example-button-row {
+  display: table-cell;
+}
+
+.button {
+  height: 40px;
+  font-size: 12px;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+section {
+  display: flex;
+}
+.summary {
+  min-height: 50px;
+  background-color: white;
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  font-size: 20px;
+  font-weight: bold;
+}
+.sub-header {
+  font-size: 10px;
+  margin-bottom: 25px;
+}
+.footer {
+  font-size: 15px;
+}
