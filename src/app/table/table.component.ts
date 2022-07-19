@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./table.component.scss'],
 })
 export class TableBasicComponent {
-  displayedColumns: string[] = ['item', 'cost'];
+  displayedColumns: string[] = ['item', 'cost', 'cost1', 'cost2', 'cost3'];
   transactions: any[] = [
     { item: 'Beach ball', cost: 4 },
     { item: 'Towel', cost: 5 },

@@ -5,7 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './zippy-multislot.component.html',
   styleUrls: ['./zippy-multislot.component.scss'],
 })
-export class ZippyMultislotComponent {}
+export class ZippyMultislotComponent {
+  public readonly items: Array<number> = [1, 2];
+}
 
 /*
 Copyright Google LLC. All Rights Reserved.
