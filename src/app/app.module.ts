@@ -12,9 +12,11 @@ import { ZippyBasicComponent } from './zippy-basic/zippy-basic.component';
 import { ZippyMultislotComponent } from './zippy-multislot/zippy-multislot.component';
 import { ZippyNgprojectasComponent } from './zippy-ngprojectas/zippy-ngprojectas.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { TableBasicComponent } from './table/table.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, MatToolbarModule],
+  imports: [BrowserModule, FormsModule, MatToolbarModule, MatTableModule],
   declarations: [
     AppComponent,
     ZippyComponent,
@@ -23,6 +25,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     ZippyBasicComponent,
     ZippyMultislotComponent,
     ZippyNgprojectasComponent,
+    TableBasicComponent,
   ],
   bootstrap: [AppComponent],
 })
