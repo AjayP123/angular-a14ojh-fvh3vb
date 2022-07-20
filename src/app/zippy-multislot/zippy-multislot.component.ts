@@ -20,6 +20,7 @@ export class ZippyMultislotComponent {
     'createdBy',
     'responsive',
   ];
+  totalColumns = ['total'];
   public auditLogs = [
     { auditEventType: '06/07/2022', serialNumber: 1, createdBy: 'test_a' },
     { auditEventType: 'test', serialNumber: 1, createdBy: 'test_a' },

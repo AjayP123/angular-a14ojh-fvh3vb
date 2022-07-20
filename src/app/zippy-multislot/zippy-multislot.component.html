@@ -54,7 +54,11 @@
   </ng-container>
 
   <ng-container matColumnDef="total">
-    <td mat-footer-cell *matFooterCellDef="let element">
+    <td
+      mat-footer-cell
+      *matFooterCellDef="let element"
+      class="mat-column-responsive"
+    >
       <div class="footer-header">Total</div>
       <div class="mat-column-responsive__field">
         <label for="auditEventType" class="mat-column-responsive__label"
