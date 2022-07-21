@@ -1,115 +1,98 @@
-<!-- <div>
-  <mat-toolbar class="toolbar">
-    <div>
-      <button mat-button class="button">Export Csv</button>
+<div class="main">
+  <div class="logs-list">
+    <mat-toolbar class="toolbar">
+      <div>
+        <button mat-button class="button">Export Csv</button>
+      </div>
+    </mat-toolbar>
+    <div class="summary">
+      <div class="header">EV Summary</div>
+      <div class="sub-header">Created : 10 june 2022 08:50:11</div>
+      <div class="footer">Reports Total For : 05/06/2022-06/06/2022</div>
     </div>
-  </mat-toolbar>
-</div>
-<div class="summary">
-  <div class="header">EV Summary</div>
-  <div class="sub-header">Created : 10 june 2022 08:50:11</div>
-  <div class="footer">Reports Total For : 05/06/2022-06/06/2022</div>
-</div>
-<div class="filter">
-  <div class="header">Filters</div>
-</div> -->
-<!-- <div class="tables">
-  <ng-container *ngFor="let item of items">
-    <div class="table-heading">Work Test</div>
-    <hr />
-    <table-basic></table-basic>
-  </ng-container>
-</div> -->
-<!-- <div class="tables">
-  <ng-container *ngFor="let item of items">
-    <div class="table-heading">Work Test</div>
-    <hr />
-    <div class="table-content">
-      <div class="table-header">
-        <div>Start Date</div>
-        <div>End Date</div>
-      </div>
-      <div>05/06/2022</div>
-    </div>
-  </ng-container>
-</div> -->
-<table mat-table class="logs-list__table" [dataSource]="auditLogs">
-  <caption>
-    Audit logs list
-  </caption>
-  <ng-container matColumnDef="auditEventType">
-    <th scope="col" mat-header-cell *matHeaderCellDef>Event</th>
-    <td mat-cell *matCellDef="let element">{{ element.auditEventType }}</td>
-    <td mat-footer-cell *matFooterCellDef colspan="8">
-      No audit logs available
-    </td>
-  </ng-container>
-  <ng-container matColumnDef="serialNumber">
-    <th scope="col" mat-header-cell *matHeaderCellDef>Control Unit</th>
-    <td mat-cell *matCellDef="let element">{{ element.serialNumber }}</td>
-  </ng-container>
-  <ng-container matColumnDef="createdBy">
-    <th scope="col" mat-header-cell *matHeaderCellDef>User</th>
-    <td mat-cell *matCellDef="let element">{{ element.createdBy }}</td>
-  </ng-container>
+    <table mat-table class="logs-list__table" [dataSource]="auditLogs">
+      <caption class="logs-list__header">
+        Audit logs list
+      </caption>
+      <ng-container matColumnDef="auditEventType">
+        <th scope="col" mat-header-cell *matHeaderCellDef>Event</th>
+        <td mat-cell *matCellDef="let element">{{ element.auditEventType }}</td>
+        <td mat-footer-cell *matFooterCellDef colspan="8">
+          No audit logs available
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="serialNumber">
+        <th scope="col" mat-header-cell *matHeaderCellDef>Control Unit</th>
+        <td mat-cell *matCellDef="let element">{{ element.serialNumber }}</td>
+      </ng-container>
+      <ng-container matColumnDef="createdBy">
+        <th scope="col" mat-header-cell *matHeaderCellDef>User</th>
+        <td mat-cell *matCellDef="let element">{{ element.createdBy }}</td>
+      </ng-container>
 
-  <ng-container matColumnDef="total">
-    <td
-      mat-footer-cell
-      *matFooterCellDef="let element"
-      class="mat-column-responsive"
-    >
-      <div class="footer-header">Total</div>
-      <div class="mat-column-responsive__field">
-        <label for="auditEventType" class="mat-column-responsive__label"
-          >Total Distance</label
+      <ng-container matColumnDef="total">
+        <td
+          mat-footer-cell
+          *matFooterCellDef="let element"
+          class="mat-column-responsive"
         >
-        <span class="mat-column-responsive__value">89.63</span>
-      </div>
-      <div class="mat-column-responsive__field">
-        <label for="serialNumber" class="mat-column-responsive__label"
-          >Total Unit</label
-        >
-        <span class="mat-column-responsive__value">89.65 </span>
-      </div>
-      <div class="mat-column-responsive__field">
-        <label for="createdBy" class="mat-column-responsive__label"
-          >Count</label
-        >
-        <span class="mat-column-responsive__value">99 </span>
-      </div>
-    </td>
-  </ng-container>
+          <div class="footer-header">Total</div>
+          <div class="mat-column-responsive__field">
+            <label for="auditEventType" class="mat-column-responsive__label"
+              >Total Distance</label
+            >
+            <span class="mat-column-responsive__value">89.63</span>
+          </div>
+          <div class="mat-column-responsive__field">
+            <label for="serialNumber" class="mat-column-responsive__label"
+              >Total Unit</label
+            >
+            <span class="mat-column-responsive__value">89.65 </span>
+          </div>
+          <div class="mat-column-responsive__field">
+            <label for="createdBy" class="mat-column-responsive__label"
+              >Count</label
+            >
+            <span class="mat-column-responsive__value">99 </span>
+          </div>
+        </td>
+      </ng-container>
 
-  <ng-container matColumnDef="responsive">
-    <th scope="col" mat-header-cell *matHeaderCellDef></th>
-    <td mat-cell *matCellDef="let element">
-      <div class="mat-column-responsive__field">
-        <label for="auditEventType" class="mat-column-responsive__label"
-          >Start Date <br />
-          End Date</label
-        >
-        <span class="mat-column-responsive__value"
-          >{{ element.auditEventType }} <br />{{ element.auditEventType }}</span
-        >
-      </div>
-      <div class="mat-column-responsive__field">
-        <label for="serialNumber" class="mat-column-responsive__label"
-          >Control Unit</label
-        >
-        <span class="mat-column-responsive__value"
-          >{{ element.serialNumber }}
-        </span>
-      </div>
-      <div class="mat-column-responsive__field">
-        <label for="createdBy" class="mat-column-responsive__label">User</label>
-        <span class="mat-column-responsive__value"
-          >{{ element.createdBy }}
-        </span>
-      </div>
-    </td>
-  </ng-container>
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-  <tr mat-footer-row *matFooterRowDef="['total']" class="footer-row"></tr>
-</table>
+      <ng-container matColumnDef="responsive">
+        <th scope="col" mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+          <div class="mat-column-responsive__field">
+            <label for="auditEventType" class="mat-column-responsive__label"
+              >Start Date <br />
+              End Date</label
+            >
+            <span class="mat-column-responsive__value"
+              >{{ element.auditEventType }} <br />{{
+                element.auditEventType
+              }}</span
+            >
+          </div>
+          <div class="mat-column-responsive__field">
+            <label for="serialNumber" class="mat-column-responsive__label"
+              >Control Unit</label
+            >
+            <span class="mat-column-responsive__value"
+              >{{ element.serialNumber }}
+            </span>
+          </div>
+          <div class="mat-column-responsive__field">
+            <label for="createdBy" class="mat-column-responsive__label"
+              >User</label
+            >
+            <span class="mat-column-responsive__value"
+              >{{ element.createdBy }}
+            </span>
+          </div>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      <tr mat-footer-row *matFooterRowDef="['total']" class="footer-row"></tr>
+    </table>
+  </div>
+</div>
