@@ -110,6 +110,18 @@
           margin: 2px;
         }
       }
+      .footer-desktop {
+        display: none;
+        @media screen and(min-width:768px) {
+          display: table-row;
+        }
+      }
+      .footer-mobile {
+        display: none;
+        @media screen and(max-width:768px) {
+          display: table-row;
+        }
+      }
     }
 
     .mat-column-actions {
@@ -133,12 +145,6 @@
       button {
         text-align: left;
       }
-    }
-  }
-  .footer-responsive {
-    display: none;
-    @media screen and(min-width:768px) {
-      display: table-cell;
     }
   }
 
