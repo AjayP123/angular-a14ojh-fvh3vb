@@ -204,6 +204,7 @@
         @media screen and(min-width:768px) {
           display: table-row;
           background-color: #f2f2f2;
+          border-bottom: 2px solid #333333;
         }
       }
       .footer-mobile {
@@ -211,6 +212,7 @@
         @media screen and(max-width:768px) {
           display: table-row;
           background-color: #f2f2f2;
+          border-bottom: 2px solid #333333;
         }
       }
     }
