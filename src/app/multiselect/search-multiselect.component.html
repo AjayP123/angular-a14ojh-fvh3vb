@@ -1,0 +1,25 @@
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
+<div class="search-container" [ngClass]="{ scheduled: scheduled }">
+  <input
+    class="search-input"
+    type="search"
+    [(ngModel)]="reportFilter"
+    (click)="test()"
+    a7s-id="search-input"
+  />
+  <mat-icon class="icon" color="currentcolor">search</mat-icon>
+  <mat-icon
+    class="close-icon"
+    a7s-id="clear-search-button"
+    (click)="clearSearchBox()"
+    *ngIf="reportFilter"
+  >
+  </mat-icon>
+</div>
+<ng-container *ngIf="clickedontextbox; then loadvechile"></ng-container>
+<ng-template #loadvechile>
+  <checkbox-list></checkbox-list>
+</ng-template>

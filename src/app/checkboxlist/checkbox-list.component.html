@@ -1,0 +1,29 @@
+<div class="checkbox-container">
+  <div *ngIf="true" class="buttons-arrange">
+    <button
+      mat-button
+      color="secondary"
+      type="button"
+      class="checkbox-list__button"
+      (click)="changeAll(true)"
+    >
+      Select All
+    </button>
+    <button
+      id="btnDeselectAll"
+      mat-button
+      color="secondary"
+      type="button"
+      class="checkbox-list__button"
+      (click)="changeAll(false)"
+    >
+      Deselect All
+    </button>
+  </div>
+  <ng-container *ngIf="true; then loaded"></ng-container>
+  <ng-template #loaded>
+    <mat-checkbox *ngFor="let option of options" class="checkbox-list__option"
+      >{{ option.label }}
+    </mat-checkbox>
+  </ng-template>
+</div>

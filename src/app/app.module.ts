@@ -14,9 +14,25 @@ import { ZippyNgprojectasComponent } from './zippy-ngprojectas/zippy-ngprojectas
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { TableBasicComponent } from './table/table.component';
 import { MatTableModule } from '@angular/material/table';
-
+import { SearchMultiSelectComponent } from './multiselect/search-multiselect.component';
+import { CheckboxListComponent } from './checkboxlist/checkbox-list.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
-  imports: [BrowserModule, FormsModule, MatToolbarModule, MatTableModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    MatToolbarModule,
+    MatTableModule,
+    MatIconModule,
+    MatInputModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    BrowserAnimationsModule,
+  ],
   declarations: [
     AppComponent,
     ZippyComponent,
@@ -26,6 +42,8 @@ import { MatTableModule } from '@angular/material/table';
     ZippyMultislotComponent,
     ZippyNgprojectasComponent,
     TableBasicComponent,
+    SearchMultiSelectComponent,
+    CheckboxListComponent,
   ],
   bootstrap: [AppComponent],
 })
