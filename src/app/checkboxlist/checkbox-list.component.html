@@ -22,8 +22,10 @@
   </div>
   <ng-container *ngIf="true; then loaded"></ng-container>
   <ng-template #loaded>
-    <mat-checkbox *ngFor="let option of options" class="checkbox-list__option"
-      >{{ option.label }}
-    </mat-checkbox>
+    <div class="list-behaviour">
+      <mat-checkbox *ngFor="let option of options" class="checkbox-list__option"
+        >{{ option.label }}
+      </mat-checkbox>
+    </div>
   </ng-template>
 </div>

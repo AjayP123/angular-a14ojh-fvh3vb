@@ -18,8 +18,10 @@
     *ngIf="reportFilter"
   >
   </mat-icon>
+  <checkbox-list *ngIf="clickedontextbox"></checkbox-list>
+  <!-- <ng-container *ngIf="clickedontextbox; then loadvechile"></ng-container> -->
 </div>
-<ng-container *ngIf="clickedontextbox; then loadvechile"></ng-container>
+
 <ng-template #loadvechile>
   <checkbox-list></checkbox-list>
 </ng-template>

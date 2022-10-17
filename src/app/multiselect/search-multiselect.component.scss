@@ -1,15 +1,15 @@
 $gray: #808080;
 
 .search-container {
-  width: 100%;
-  max-width: 414px;
+  width: 296px;
   display: grid;
   grid-template-areas: 'overlap';
+  margin: 25px;
 
   input.search-input {
     border-radius: 2px;
     height: 40px;
-    width: 100%;
+    width: 296px;
     border: 1px solid #d8d8d8;
     text-indent: 30px;
     grid-area: overlap;

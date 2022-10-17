@@ -1,26 +1,38 @@
 .checkbox-container {
   display: flex;
-  flex-wrap: wrap;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12),
     0px 2px 4px -1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   width: 296px;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
   padding: 8px 0px;
+  position: absolute;
+  z-index: 1000;
+  background: #ffffff;
+}
+.list-behaviour {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  overflow-y: scroll;
+  /* max-width: 278px; */
+  width: 296px;
+}
+
+::ng-deep .mat-checkbox .mat-checkbox-label {
+  line-height: 48px;
 }
 .buttons-arrange {
   display: flex;
   flex-wrap: wrap;
-  width: 296px;
+  width: 278px;
   height: 48px;
   justify-content: space-evenly;
 }
 .checkbox-list {
-  .mat-checkbox-layout .mat-checkbox-label {
-    line-height: 48px;
-  }
+  max-height: 308px;
+  overflow-y: scroll;
   &__option {
     flex: 1 1 100%;
     padding-left: 16px;
