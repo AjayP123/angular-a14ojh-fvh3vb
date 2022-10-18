@@ -11,17 +11,12 @@
     a7s-id="search-input"
   />
   <mat-icon class="icon" color="currentcolor">search</mat-icon>
-  <mat-icon
+  <!-- <mat-icon
     class="close-icon"
     a7s-id="clear-search-button"
     (click)="clearSearchBox()"
     *ngIf="reportFilter"
   >
-  </mat-icon>
-  <checkbox-list *ngIf="clickedontextbox"></checkbox-list>
-  <!-- <ng-container *ngIf="clickedontextbox; then loadvechile"></ng-container> -->
+  </mat-icon> -->
+  <ng-content *ngIf="clickedontextbox"></ng-content>
 </div>
-
-<ng-template #loadvechile>
-  <checkbox-list></checkbox-list>
-</ng-template>

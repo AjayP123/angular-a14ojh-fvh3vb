@@ -15,7 +15,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { TableBasicComponent } from './table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import { SearchMultiSelectComponent } from './multiselect/search-multiselect.component';
+import { MultiSelectWrapperComponent } from './multiselect/multiselect-wrapper.component';
 import { CheckboxListComponent } from './checkboxlist/checkbox-list.component';
+import { CheckboxListMobileComponent } from './checkboxlist/checkbox-list-mobile.component';
+import { CheckBoxWrapperComponent } from './checkboxlist/checkbox-wrapper.component';
+import { ButtonsListComponent } from './checkboxlist/buttons-list.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -44,6 +48,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TableBasicComponent,
     SearchMultiSelectComponent,
     CheckboxListComponent,
+    CheckboxListMobileComponent,
+    MultiSelectWrapperComponent,
+    CheckBoxWrapperComponent,
+    ButtonsListComponent,
   ],
   bootstrap: [AppComponent],
 })
